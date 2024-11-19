@@ -98,25 +98,31 @@ module spacer(pcb_spacing)
         }        
     }
 }
-if(true)
+
+// Black spacer
+if(false)
 {
     color("#ffcc00")
     spacer(4.9);
 }
 
-if(true)
+// Purple Fn button
+if(false)
 {
     color("#9977ff")
     union()
     {
-        translate([-13, 24, 0])
+        translate([-13, 26, 0])
             button(4.8, 1.6, 1, 4.7, 0.6);
 
-        translate([-13, 24 - 18/2, 0.8/2+1.5])
-            cube([2, 18, 0.8], center = true);
+        translate([-13+8/2+1, 26, 0.8/2+1.5])
+            cube([8, 2, 0.8], center = true);
 
-        translate([-13/2, 7, 0.8/2+1.5])
-            cube([13, 2, 0.8], center = true);
+        translate([-5, 26 - 20/2, 0.8/2+1.5])
+            cube([2, 20, 0.8], center = true);
+
+        translate([-5/2, 7, 0.8/2+1.5])
+            cube([5, 2, 0.8], center = true);
 
         translate([0, 3.5+4.5/2, 0.8/2+1.5])
             cube([2, 4.5, 0.8], center = true);
@@ -135,6 +141,7 @@ if(true)
     }
 }
 
+// Black Boot and Reset buttons
 if(true)
 {
     color("#444444")

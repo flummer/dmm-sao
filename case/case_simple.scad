@@ -19,8 +19,11 @@ module case(width, height)
                 {
                     for (y = [-1, 1])
                     {
-                        translate([x*(width/2), y*(height/2), 8.5/2])
-                            cylinder(r1 = 3 + 2, r2 = 4.5 + 2, h = 8.5, center = true, $fn = 80);
+                        translate([x*(width/2), y*(height/2), 1 + (8.5 - 1)/2])
+                            cylinder(r1 = 3 + 2, r2 = 4.5 + 2, h = 8.5-1, center = true, $fn = 80);
+
+                        translate([x*(width/2), y*(height/2), 2/2])
+                            cylinder(r = 3 + 2 - 1, h = 2, center = true, $fn = 80);        
                     }
                 }
             }
@@ -101,18 +104,18 @@ module case(width, height)
 
             // knob
             translate([9, -2, 10/2 + 2 + 1.6])
-                cylinder(r = 11.3, h = 10, center = true, $fn = 80);
+                cylinder(r = 11.3, h = 10, center = true, $fn = 150);
 
-            translate([9+22-2, -2, 10/2 + 2 + 1.6])
-                cylinder(r = 11.3, h = 20, center = true, $fn = 80);
+            translate([9+22-1.6, -2, 10/2 + 2 + 1.6])
+                cylinder(r = 11.3, h = 20, center = true, $fn = 150);
             
             translate([9+22-11, -2, 10/2 + 2 + 1.6])
-                cube([10, 13, 10], center = true);
+                cube([10, 12, 10], center = true);
                 
             // knob notch ball
-            translate([9, -2, 3.6-0.2])
+            translate([9, -2, 3.6-0.3])
             rotate(30, [0, 0, 1])
-            translate([10.4, 0, 0])
+            translate([10.6, 0, 0])
                 sphere(d = 1.5, $fn = 30);
 
             // usb connector
@@ -175,12 +178,35 @@ module case(width, height)
         }        
     }
     
+    for (x = [-1, 1])
+    {
+        for (y = [-1, 1])
+        {
+            translate([x*(width/2 + 4.5 + 0.1 + 0.1), y*(height/2-11), 8.5 + 1.6 + 0.3])
+            hull()
+            {
+                translate([0, 1, 0])
+                    sphere(r = 0.5, $fn = 20);
+
+                translate([0, -1, 0])
+                    sphere(r = 0.5, $fn = 20);
+            }
+        }
+    }
+
+    
     difference()
     {
         // base under knob
-        translate([9, -2, 3.6/2])
-            cylinder(r = 9.9, h = 3.6, center = true, $fn = 80);
-            
+        hull()
+        {
+            translate([9, -2, 1 + (3.6 - 1)/2])
+                cylinder(r = 9.9, h = 3.6 - 1, center = true, $fn = 150);
+
+            translate([9, -2, 2/2])
+                cylinder(r = 9.9-1, h = 2, center = true, $fn = 150);
+        }
+        
         translate([9-1.7, -2, 3.6/2])
             cube([20, 20, 4], center = true);
             
