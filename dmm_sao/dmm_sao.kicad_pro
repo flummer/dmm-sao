@@ -38,8 +38,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 0.0,
-          "height": 2.0,
-          "width": 2.0
+          "height": 2.0828,
+          "width": 2.0828
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -62,6 +62,10 @@
         [
           "unresolved_variable|81500000|67000000|c8f9ef90-a973-4e12-904b-452dd7726198|00000000-0000-0000-0000-000000000000",
           "Only for 3D render of front panel"
+        ],
+        [
+          "unresolved_variable|83000000|68500000|2bb06a62-a6dc-4159-842e-9adf8ca7d55b|00000000-0000-0000-0000-000000000000",
+          "Only for 3D render of screen support"
         ]
       ],
       "meta": {
@@ -74,6 +78,7 @@
         "copper_edge_clearance": "error",
         "copper_sliver": "warning",
         "courtyards_overlap": "error",
+        "creepage": "error",
         "diff_pair_gap_out_of_range": "error",
         "diff_pair_uncoupled_length_too_long": "error",
         "drill_out_of_range": "error",
@@ -112,7 +117,9 @@
         "text_thickness": "warning",
         "through_hole_pad_without_hole": "error",
         "too_many_vias": "error",
+        "track_angle": "error",
         "track_dangling": "warning",
+        "track_segment_length": "error",
         "track_width": "error",
         "tracks_crossing": "error",
         "unconnected_items": "error",
@@ -125,6 +132,7 @@
         "min_clearance": 0.0,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.5,
+        "min_groove_width": 0.0,
         "min_hole_clearance": 0.2,
         "min_hole_to_hole": 0.25,
         "min_microvia_diameter": 0.2,
@@ -142,10 +150,11 @@
       },
       "teardrop_options": [
         {
-          "td_onpadsmd": true,
+          "td_onpthpad": true,
           "td_onroundshapesonly": false,
+          "td_onsmdpad": true,
           "td_ontrackend": false,
-          "td_onviapad": true
+          "td_onvia": true
         }
       ],
       "teardrop_parameters": [

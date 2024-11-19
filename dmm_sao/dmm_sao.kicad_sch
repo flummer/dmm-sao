@@ -6,9 +6,10 @@
 	(paper "A4")
 	(title_block
 		(title "DMM SAO")
-		(date "2024-10-05")
-		(rev "1.0")
+		(date "2024-11-19")
+		(rev "1.1")
 		(company "HXR.DK")
+		(comment 1 "CC-BY-SA")
 	)
 	(lib_symbols
 		(symbol "Bornhack-Make-Tradition-Badge-rescue:GND"
@@ -205,113 +206,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Connector:TestPoint"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0.762)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "TP"
-				(at 0 6.858 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "TestPoint"
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 5.08 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 5.08 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "test point"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "test point tp"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Pin* Test*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "TestPoint_0_1"
-				(circle
-					(center 0 3.302)
-					(radius 0.762)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "TestPoint_1_1"
-				(pin passive line
-					(at 0 0 90)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -594,6 +488,133 @@
 						)
 					)
 					(number "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:Speaker"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "LS"
+				(at 1.27 5.715 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify right)
+				)
+			)
+			(property "Value" "Speaker"
+				(at 1.27 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify right)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at -0.254 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Speaker"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "speaker sound"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Speaker_0_0"
+				(rectangle
+					(start -2.54 1.27)
+					(end 1.016 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 1.27) (xy 3.556 3.81) (xy 3.556 -6.35) (xy 1.016 -3.81)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Speaker_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -5.08 -2.54 0)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1038,6 +1059,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "PWM Channel 3 A+B"
+		(exclude_from_sim no)
+		(at 251.968 64.262 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "c7288f79-166f-473e-9449-b4c7856e95cc")
+	)
 	(junction
 		(at 157.48 104.14)
 		(diameter 0)
@@ -1059,6 +1090,16 @@
 			(type default)
 		)
 		(uuid "0a657614-b310-4979-9612-e36222942f9a")
+	)
+	(wire
+		(pts
+			(xy 240.03 69.85) (xy 248.92 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0da41b1a-c474-41cc-be77-3fe94514d28f")
 	)
 	(wire
 		(pts
@@ -1152,7 +1193,7 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 72.39) (xy 247.65 72.39)
+			(xy 240.03 72.39) (xy 248.92 72.39)
 		)
 		(stroke
 			(width 0)
@@ -1179,16 +1220,6 @@
 			(type default)
 		)
 		(uuid "e167ecab-2577-4bc5-90db-394934b1205a")
-	)
-	(wire
-		(pts
-			(xy 247.65 72.39) (xy 247.65 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e5ebdd7a-cc8d-4d5b-9050-a983f3e5fdec")
 	)
 	(wire
 		(pts
@@ -1829,17 +1860,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 247.65 69.85 0)
+		(lib_id "Device:Speaker")
+		(at 254 69.85 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "4f6fb0a7-06d8-490e-a604-46b75d3d928f")
-		(property "Reference" "TP1"
-			(at 250.19 65.2779 0)
+		(uuid "45c8ec1c-e7b3-40d7-b2ec-987e89c91322")
+		(property "Reference" "LS1"
+			(at 259.08 69.8499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1847,8 +1878,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Buzzer"
-			(at 250.19 67.8179 0)
+		(property "Value" "OWPB-909018S-40-03"
+			(at 259.08 72.3899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1856,8 +1887,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
-			(at 252.73 69.85 0)
+		(property "Footprint" "Buzzer_Beeper:Buzzer_CUI_CPT-9019S-SMT"
+			(at 254 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1866,7 +1897,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 252.73 69.85 0)
+			(at 253.746 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1874,8 +1905,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "test point"
-			(at 247.65 69.85 0)
+		(property "Description" "Speaker"
+			(at 254 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1884,12 +1915,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "5dc31c84-9fab-46a8-9436-85fc8e74d709")
+			(uuid "6c07e4bf-6477-41b9-b4c5-8dd64b5d3259")
+		)
+		(pin "2"
+			(uuid "e92f2b53-6b62-4190-9bcc-378c083c8cb5")
 		)
 		(instances
 			(project ""
 				(path "/f26ce819-5d33-4e93-ae51-f48c2c0f5bc2"
-					(reference "TP1")
+					(reference "LS1")
 					(unit 1)
 				)
 			)
@@ -2735,6 +2769,16 @@
 				(justify right)
 			)
 			(uuid "58eac972-314a-4441-aa5e-cda94f97f045")
+		)
+		(pin "SPI_COPI{slash}G7" input
+			(at 240.03 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "5bde4bfe-eca1-478c-ba53-ee1e0ff39caf")
 		)
 		(instances
 			(project "dmm_sao"

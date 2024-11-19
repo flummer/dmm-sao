@@ -3,15 +3,15 @@
     "GenerationSoftware": {
       "Vendor": "KiCad",
       "Application": "Pcbnew",
-      "Version": "8.99.0-2433-g53022ab347"
+      "Version": "8.99.0-3110-g1838b2656d"
     },
-    "CreationDate": "2024-10-12T16:59:45+02:00"
+    "CreationDate": "2024-11-19T22:26:20+01:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "dmm_sao",
       "GUID": "646d6d5f-7361-46f2-9e6b-696361645f70",
-      "Revision": "1.0"
+      "Revision": "1.1"
     },
     "Size": {
       "X": 34.05,
