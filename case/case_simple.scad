@@ -70,6 +70,19 @@ module case(width, height)
                 }
             }
 
+            // space for v-score left overs
+            hull()
+            {
+                for (x = [-1, 1])
+                {
+                    for (y = [-1, 1])
+                    {
+                        translate([x*(width/2), y*(height/2 - 1.25 + 3 + 0.7), 8.5/2 + 2])
+                            cylinder(r = 1 + 0.25, h = 8.51, center = true, $fn = 80);
+                    }
+                }
+            }
+
             // space for screen flex
             hull()
             {
@@ -113,10 +126,13 @@ module case(width, height)
                 cube([10, 12, 10], center = true);
                 
             // knob notch ball
-            translate([9, -2, 3.6-0.3])
-            rotate(30, [0, 0, 1])
-            translate([10.6, 0, 0])
-                sphere(d = 1.5, $fn = 30);
+            if(false)
+            {
+                translate([9, -2, 3.6-0.3])
+                rotate(30, [0, 0, 1])
+                translate([10.6, 0, 0])
+                    sphere(d = 1.5, $fn = 30);
+            }
 
             // usb connector
             translate([width/2+5, 20, 2 + 1.6 + 3.6/2])
@@ -194,7 +210,44 @@ module case(width, height)
         }
     }
 
-    
+    // base for intent notch
+    difference()
+    {
+        hull()
+        {
+            translate([9 + 5 + 4, -2 + 10.58 + 4, 1 + (3.6 - 1)/2])
+                cylinder(r = 0.8, h = 3.6 - 1, center = true, $fn = 150);
+
+            translate([9 + 5, -2 + 10.58, 1 + (3.6 - 1)/2])
+                cylinder(r = 0.8, h = 3.6 - 1, center = true, $fn = 150);
+
+            translate([9 + 5, -2 + 7.41, 1 + (3.6 - 1)/2])
+                cylinder(r = 0.8, h = 3.6 - 1, center = true, $fn = 150);
+
+            translate([9 + 5 + 4, -2 + 7.41 - 4, 1 + (3.6 - 1)/2])
+                cylinder(r = 0.8, h = 3.6 - 1, center = true, $fn = 150);
+        }
+        
+        translate([9-1.7+21, -2 + 9, 3.6/2])
+            cube([20, 20, 4], center = true);
+    }
+
+    if(true)
+    {
+        hull()
+        {
+            translate([9, -2, 3.6-0.2])
+            rotate(60, [0, 0, 1])
+            translate([12.4, 0, 0])
+                sphere(d = 1.2, $fn = 30);
+
+            translate([9, -2, 3.6-0.2])
+            rotate(60, [0, 0, 1])
+            translate([9.9, 0, 0])
+                sphere(d = 1.2, $fn = 30);
+        }
+    }
+
     difference()
     {
         // base under knob
@@ -211,13 +264,16 @@ module case(width, height)
             cube([20, 20, 4], center = true);
             
         // knob notch ball
-        translate([9, -2, 3.6-0.2])
-        rotate(30, [0, 0, 1])
-        translate([10.4, 0, 0])
-            sphere(d = 1.5, $fn = 30);
-
+        if(false)
+        {
+            translate([9, -2, 3.6-0.2])
+            rotate(30, [0, 0, 1])
+            translate([10.4, 0, 0])
+                sphere(d = 1.5, $fn = 30);
+        }
     }
 
 }
 
+color("#ffcc00")
 case(28, 62);
