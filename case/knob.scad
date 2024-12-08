@@ -26,12 +26,12 @@ module knob(pcb_spacing, pcb_thickness, extension, diameter, rounding)
                             cylinder(r = diameter/2, h = pcb_spacing + pcb_thickness + extension + 1, center = true, $fn = 200);
 
                         translate([0, 0, -(pcb_spacing + pcb_thickness + extension)*3])
-                            sphere(r = (pcb_spacing + pcb_thickness + extension)*4, $fn = 300);
+                            sphere(r = (pcb_spacing + pcb_thickness + extension)*4, $fn = 400);
                     }
                     difference()
                     {
                         translate([0, 0, (pcb_spacing + pcb_thickness + extension)*5-3.7+0.3])
-                            sphere(r = (pcb_spacing + pcb_thickness + extension)*4 - rounding, $fn = 300);
+                            sphere(r = (pcb_spacing + pcb_thickness + extension)*4 - rounding, $fn = 400);
 
                         translate([0, 0, 0])
                             cube([diameter + 2, 3, 25], center = true);
@@ -53,12 +53,12 @@ module knob(pcb_spacing, pcb_thickness, extension, diameter, rounding)
 
             // knob indicator indent
             translate([-8.5, 0, 7])
-                sphere(d = 1.7, $fn = 30);
+                sphere(d = 1.7, $fn = 100);
                 
             // notches on the bottom of the knob
             for (a = [30, 60, 90, 120, 150, 180])
             {
-                translate([0, 0, -0.4])
+                translate([0, 0, -0.2])
                 rotate(a, [0, 0, 1])
                 rotate(90, [1, 0, 0])
                 rotate(45, [0, 0, 1])

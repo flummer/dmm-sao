@@ -20,10 +20,10 @@ module case(width, height)
                     for (y = [-1, 1])
                     {
                         translate([x*(width/2), y*(height/2), 1 + (8.5 - 1)/2])
-                            cylinder(r1 = 3 + 2, r2 = 4.5 + 2, h = 8.5-1, center = true, $fn = 80);
+                            cylinder(r1 = 3 + 2, r2 = 4.5 + 2, h = 8.5-1, center = true, $fn = 200);
 
                         translate([x*(width/2), y*(height/2), 2/2])
-                            cylinder(r = 3 + 2 - 1, h = 2, center = true, $fn = 80);        
+                            cylinder(r = 3 + 2 - 1, h = 2, center = true, $fn = 200);        
                     }
                 }
             }
@@ -35,7 +35,7 @@ module case(width, height)
                     for (y = [-1, 1])
                     {
                         translate([x*(width/2), y*(height/2), 8.5 + 4/2])
-                            cylinder(r1 = 4.5 + 2, r2 = 4.5 + 2, h = 4, center = true, $fn = 80);
+                            cylinder(r1 = 4.5 + 2, r2 = 4.5 + 2, h = 4, center = true, $fn = 200);
                     }
                 }
             }
@@ -52,7 +52,7 @@ module case(width, height)
                     for (y = [-1, 1])
                     {
                         translate([x*(width/2), y*(height/2), 8.5 + 4/2])
-                            cylinder(r = 4.5 + 0.1, h = 4.01, center = true, $fn = 80);
+                            cylinder(r = 4.5 + 0.2, h = 4.01, center = true, $fn = 200);
                     }
                 }
             }
@@ -89,7 +89,7 @@ module case(width, height)
                 for (x = [-1, 1])
                 {
                     translate([x*(width/2 - 6), (height/2), 6.5/2 + 2])
-                        cylinder(r1 = 3 + 0.25, r2 = 4.5 + 0.1, h = 6.51, center = true, $fn = 80);
+                        cylinder(r1 = 3 + 0.25, r2 = 4.5 + 0.2, h = 6.51, center = true, $fn = 80);
                 }
             }
             
@@ -106,7 +106,7 @@ module case(width, height)
             
             // sao connector
             translate([0, -20, 0])
-                cube([16, 9, 10], center = true);
+                cube([16.2, 9.2, 10], center = true);
 
             // 2mm banana space
             translate([11, -28, 2/2 + 1])
@@ -117,10 +117,10 @@ module case(width, height)
 
             // knob
             translate([9, -2, 10/2 + 2 + 1.6])
-                cylinder(r = 11.3, h = 10, center = true, $fn = 150);
+                cylinder(r = 11.3, h = 10, center = true, $fn = 250);
 
             translate([9+22-1.6, -2, 10/2 + 2 + 1.6])
-                cylinder(r = 11.3, h = 20, center = true, $fn = 150);
+                cylinder(r = 11.3, h = 20, center = true, $fn = 250);
             
             translate([9+22-11, -2, 10/2 + 2 + 1.6])
                 cube([10, 12, 10], center = true);
@@ -150,7 +150,7 @@ module case(width, height)
                     }
                 }
 
-            translate([width/2 + 3 + 1.6 - 5/2, 20, 2 + 1.6 + 3.6/2 + 10/2])
+            translate([width/2 + 3 + 1.5 + 0.2 - 5/2, 20, 2 + 1.6 + 3.6/2 + 10/2])
             rotate(90, [0, 0, 1])
             rotate(90, [1, 0, 0])
                 hull()
@@ -216,7 +216,7 @@ module case(width, height)
         hull()
         {
             translate([9 + 5 + 4, -2 + 10.58 + 4, 1 + (3.6 - 1)/2])
-                cylinder(r = 0.8, h = 3.6 - 1, center = true, $fn = 150);
+                cylinder(r = 0.8, h = 3.6 - 1, center = true, $fn = 050);
 
             translate([9 + 5, -2 + 10.58, 1 + (3.6 - 1)/2])
                 cylinder(r = 0.8, h = 3.6 - 1, center = true, $fn = 150);
@@ -253,10 +253,10 @@ module case(width, height)
         // base under knob
         hull()
         {
-            translate([9, -2, 1 + (3.6 - 1)/2])
-                cylinder(r = 9.9, h = 3.6 - 1, center = true, $fn = 150);
+            translate([9, -2, 2 + (2.6 - 1)/2])
+                cylinder(r = 9.9, h = 2.6 - 1, center = true, $fn = 250);
 
-            translate([9, -2, 2/2])
+            translate([9, -2, 2/2 + 0.5])
                 cylinder(r = 9.9-1, h = 2, center = true, $fn = 150);
         }
         
