@@ -33,7 +33,7 @@ During this, you might be asked or be blocked by your operating system, as somet
 
 The case and all the button caps, the main knob, and internal spacers to make sure everything sits correctly are designed to be 3D printed with a regular consumer printer. They have been tweaked to be printable with a 0.4mm nozzle, but using a smaller one (eg. 0.2mm) will allow you to use thinner layers, at least in some places, to get a smoother top finnish (top of main knob and top of button caps really benefit from that).
 
-There are also files for a set of 3D printable probes, that are designed to be assembled without any tools, sandwitched around a thin probe wire soldered to a P100-B1 pogp pin for the tip.
+There are also files for a set of 3D printable probes, that are designed to be assembled without any tools, sandwitched around a thin probe wire soldered to a P100-B1 pogo pin for the tip.
 
 There is a `.3mf` file in the `case` folder with a project for BambuLab printers, including 5 plates, one for each color needed.
 
