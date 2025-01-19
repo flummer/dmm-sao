@@ -5,13 +5,13 @@
       "Application": "Pcbnew",
       "Version": "8.99.0-3110-g1838b2656d"
     },
-    "CreationDate": "2024-11-19T22:26:20+01:00"
+    "CreationDate": "2025-01-19T16:02:54+01:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "dmm_sao",
       "GUID": "646d6d5f-7361-46f2-9e6b-696361645f70",
-      "Revision": "1.1"
+      "Revision": "1.2"
     },
     "Size": {
       "X": 34.05,
