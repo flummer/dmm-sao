@@ -200,6 +200,43 @@ module middle_sleeve(length, diameter)
     }   
 }
 
+module middle_sleeve_alternative(length, diameter)
+{
+    difference()
+    {
+        union()
+        {
+            hull()
+            {
+                translate([0, 0, length/2/2+length/4])
+                    cylinder(d = diameter, h = length/2-0.2-1, center = true, $fn = 80);
+
+                translate([0, 0, length/2/2+length/4])
+                    cylinder(d = diameter-1, h = length/2-0.2, center = true, $fn = 80);
+            }
+            for (a = [0 : 30 : 360])
+            {
+                translate([0, 0, length/2])
+                rotate(a, [0, 0, 1])
+                translate([diameter/2-0.1, 0, 0])
+                hull()
+                {
+                    translate([0, 0, (length/4 - 5)])
+                        sphere(r = 0.5, $fn = 20);
+
+                    translate([0, 0, - (length/4 - 5)])
+                        sphere(r = 0.5, $fn = 20);
+                }
+            }                
+        }
+        union()
+        {
+            translate([0, 0, length/2/2+length/4])
+                cylinder(d = diameter-2*(1.5 - 0.1), h = length/2+0.1, center = true, $fn = 80);
+        }
+    }   
+}
+
 module tip_sleeve(length, diameter)
 {
     difference()
